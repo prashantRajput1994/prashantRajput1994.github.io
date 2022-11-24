@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Imprint js</title>
+    <script type="text/javascript" src="imprint.min.js"></script>
+</head>
+
+<body>
+    <div id ="check">this done</div>
+    
+    <script type="text/javascript">
+        var browserTests = [
+            "audio",
+            //"availableScreenResolution",
+            //"canvas",
+            //"colorDepth",
+            //"cookies",
+            "cpuClass",
+            //"deviceDpi",
+             //"doNotTrack",
+             "indexedDb",
+             "installedFonts",
+            // "language",
+            // "localIp",
+             "localStorage",
+            // "pixelRatio",
+            // "platform",
+            // "plugins",
+            "processorCores",
+            // "screenResolution",
+             "sessionStorage",
+            "timezoneOffset",
+            "touchSupport",
+            // "userAgent",
+            // "webGl"
+        ];
+        imprint.test(browserTests).then(function (result) {
+           let fingerprint=result;
+           let ele=document.getElementById("check");
+           ele.textContent=fingerprint;
+            
+        });
+    </script>
+    
+</body>
+
+</html>
